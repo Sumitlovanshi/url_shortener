@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: "8080"
+      BASE_URL: "http://localhost:8080"
+      DATA_PATH: "/app/data/url_shortener.db"
+    volumes:
+      - url_shortener_data:/app/data
+
+volumes:
+  url_shortener_data:
