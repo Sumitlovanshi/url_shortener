@@ -1,0 +1,11 @@
+.git
+.gitignore
+.DS_Store
+
+bin/
+coverage.out
+data/
+*.db
+
+README.md
+WRITEUP.md

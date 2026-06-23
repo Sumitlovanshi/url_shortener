@@ -1,4 +1,13 @@
-.PHONY: run test race docker-build docker-up
+.PHONY: fmt vet build run test race docker-build docker-up
+
+fmt:
+	gofmt -w ./cmd ./internal
+
+vet:
+	go vet ./...
+
+build:
+	go build -o bin/url-shortener ./cmd/server
 
 run:
 	go run ./cmd/server
